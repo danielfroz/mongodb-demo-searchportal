@@ -1,0 +1,18 @@
+{
+  "imports": {
+    "@/": "./src/",
+    "@danielfroz/slog": "jsr:@danielfroz/slog@^0.2.3",
+    "@danielfroz/sloth": "jsr:@danielfroz/sloth@^0.1.15",
+    "@std/fs": "jsr:@std/fs@^1.0.19",
+    "@std/yaml": "jsr:@std/yaml@^1.0.8",
+    "commons": "../commons/src/mod.ts",
+    "date-fns": "npm:date-fns@^4.1.0",
+    "express": "npm:express@5.1.0",
+    "mongodb": "npm:mongodb@^6.17.0"
+  },
+  "lint": {
+    "include": [
+      "no-namespace"
+    ]
+  }
+}
