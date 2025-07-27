@@ -72,11 +72,11 @@ First you select the tenant, then you can switch between the experiences.
 - Attribute: Attribute index
 - Search: Atlas Search index
 
-Everytime you search, you will see the filter utilized as well as the elapsed time (time that took to perform the search and return with the data). The backend code is computing the search elapsed time - so it will also factor the Atlas search time + network transfer time (download the response to your backend service). Keep this in mind if you have a problem with your network.
+Every time you perform a search, you'll see the filter that was used and the elapsed time - the time it took to search and return the data. 
+The backend code measures this elapsed time, so it includes both the MongoDB Atlas processing time and the time to transfer results over the network to your backend service. Keep this in mind if you experience network issues, as slowdowns may be due to network conditions.
 
-You may want to build the filters first. Just click on Filters right arrow. I will compute the filters based on all records created.
-You can then select and deselect some of the filters and see the results.
+You may want to build your filters first. Click on "Filters" or filters arrow. This will compute filter options based on all existing records. It may take sometime to return from the first run.
 
-The UI interface was built to show you the search attributes plus the information sent to the backend as well as received from the backend.
+The UI is designed to show you both the search attributes and the data sent to and received from the backend.
 
-It is not meant to be highly optimized - for instance when you add a new Tag to an existing patient, the code um pre-compute the new filters object. In a real production ready code, this function would be running asynchronously.
+The goal of this demo is to focus on database search and different index strategies. As such, the service is not highly optimized. For example, when you add a new tag to the existing patient, the backend service recomputes the filters object synchronously. In production-ready code, this function would typically run asynchronously.
