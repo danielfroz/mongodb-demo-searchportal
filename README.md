@@ -23,7 +23,7 @@ You'll need both **Node.js** and **Deno** on your computer.
 
 1. Create a cluster in MongoDB Atlas. For best results, use at least an M10 tier.
 2. Network access: Make sure your computer can access the Atlas cluster. Set up an IP whitelist in **Network Access**.
-3. User: It's recommended to create a dedicated user for this demo, following the principle of least privilege. Assign the readWrite role to the relevant database.
+3. User: It's recommended to create a dedicated user for this demo, following the least privilege principle. Assign the readWrite role to the relevant database.
 
 # Configuration
 
@@ -43,7 +43,7 @@ sh ./indexes.sh
 
 You just need to execute `indexes.sh` once.
 
-TIP: Each time you execute `loader/gen.sh` script, it will generate a new Tenant (Company / Hospital) and associated patients. You may want to change the total of patients per tenant on each execution. change the const TOTAL variable under the `loader/src/gen.ts` script.
+TIP: Each time you execute `loader/gen.sh` script, it will generate a new Tenant (Company / Hospital) and associated patients. You may want to change the total of patients per tenant on each execution. Change the const TOTAL variable under the `loader/src/gen.ts` script.
 
 # Running the Demo
 

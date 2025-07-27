@@ -5,7 +5,7 @@ export async function POST(req) {
   const log = glog.child({ mod: 'api.forum' })
 
   const path = new URL(req.url).pathname.substring('/api'.length)
-  const url = `${process.env.BACK_SERVICE}${path}`
+  const url = `${process.env.BACK_SERVICE ?? 'http://localhost:4000'}${path}`
 
   log.info({ msg: `performing request`, url })
 
