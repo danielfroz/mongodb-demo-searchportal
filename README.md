@@ -47,7 +47,7 @@ TIP: Each time you execute `loader/gen.sh` script, it will generate a new Tenant
 
 # Running the Demo
 
-Open two terminals or VS Code instances with their termnals, then execute:
+Open two terminals or VS Code instances, then execute:
 
 1. Back end
 ```shell
@@ -74,3 +74,9 @@ First you select the tenant, then you can switch between the experiences.
 
 Everytime you search, you will see the filter utilized as well as the elapsed time (time that took to perform the search and return with the data). The backend code is computing the search elapsed time - so it will also factor the Atlas search time + network transfer time (download the response to your backend service). Keep this in mind if you have a problem with your network.
 
+You may want to build the filters first. Just click on Filters right arrow. I will compute the filters based on all records created.
+You can then select and deselect some of the filters and see the results.
+
+The UI interface was built to show you the search attributes plus the information sent to the backend as well as received from the backend.
+
+It is not meant to be highly optimized - for instance when you add a new Tag to an existing patient, the code um pre-compute the new filters object. In a real production ready code, this function would be running asynchronously.
