@@ -58,6 +58,7 @@ sh ./dev.sh
 2. Front end
 ```shell
 cd front
+npm install
 sh ./dev.sh
 ```
 
