@@ -69,7 +69,7 @@ After both services start, open [http://localhost:3000](http://localhost:3000) i
 First you select the tenant, then you can switch between the experiences. 
 
 - Default: Compound index
-- Attribute: Attribute index
+- Attribute: Compound index (Attribute pattern)
 - Search: Atlas Search index
 
 Every time you perform a search, you'll see the filter that was used and the elapsed time - the time it took to search and return the data. 
